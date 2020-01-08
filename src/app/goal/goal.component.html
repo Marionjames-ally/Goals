@@ -1,4 +1,4 @@
-<div class="container" style="margin-left: 400px">
+<div class="container">
         <h1>My Goals</h1>
         <hr>
       
@@ -16,7 +16,7 @@
             </div>
           </div>
           <div class="col-md-6">
-            <app-goal-form></app-goal-form>
+            <app-goal-form (addGoal)="addNewGoal($event)"></app-goal-form>
           </div>
         </div>
       
