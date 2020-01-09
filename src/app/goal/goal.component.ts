@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { Goal } from '../goal';
+import { GoalFormComponent } from '../goal-form/goal-form.component';
 
 @Component({
   selector: 'app-goal',
@@ -7,6 +8,8 @@ import { Goal } from '../goal';
   styleUrls: ['./goal.component.css']
 })
 export class GoalComponent implements OnInit {
+
+  // @ViewChild(GoalFormComponent, {static:false}) GoalFormComponent: GoalFormComponent;
 
   goals: Goal[] = [
     new Goal(1, 'Watch finding Nemo', 'Find an online version and watch merlin find his son',new Date(2020,3,14)),
@@ -35,8 +38,9 @@ export class GoalComponent implements OnInit {
     goal.id = goalLength+1;
     goal.completeDate = new Date(goal.completeDate)
     this.goals.push(goal)
+      }
 
-  }
+    
 
   constructor() { }
 
