@@ -1,6 +1,5 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import {Goal} from '../goal';
-import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-goal-form',
