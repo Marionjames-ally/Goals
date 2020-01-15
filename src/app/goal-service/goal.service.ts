@@ -9,7 +9,7 @@ export class GoalService {
   goalService: any;
 
   getGoals(){
-    return Goal
+    return Goal;
   }
 
   constructor() { }

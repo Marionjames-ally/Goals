@@ -12,7 +12,7 @@ export class GoalDetailComponent implements OnInit {
   @Output() isComplete = new EventEmitter<boolean>();
 
   goalDelete(complete:boolean){
-    this.isComplete.emit(complete)
+    this.isComplete.emit(complete);
   }
 
   constructor() { }

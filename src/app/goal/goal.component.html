@@ -1,4 +1,4 @@
-<div class="container">
+<!-- <div class="container">
         <h1>My Goals</h1>
         <hr>
       
@@ -18,7 +18,14 @@
           <div class="col-md-6">
             <app-goal-form (addGoal)="addNewGoal($event)"></app-goal-form>
           </div>
-        </div>
+        </div> -->
       
         <p *ngIf='goals.length > 5'>You have too many goals</p>
-      </div>
+        <div class="row">
+          <blockquote class="blockquote text-center">
+            <p class="mb-0">{{quote.quote}}</p>
+            <footer class="blockquote-footer"><cite>{{quote.author}}</cite></footer>
+          </blockquote>
+        </div>
+    
+      
