@@ -45,8 +45,14 @@ testem.log
 .DS_Store
 Thumbs.db
 
-# ignore all the json files
-*.json
+# Ignore everything under node_modules
+node_modules/*
 
-# ignore
-karma.conf.js
+# Exceptions the subfolders
+!node_modules/**/
+
+# Exceptions the files (since the parent folders are not ignored)
+!node_modules/angularfire/dist/angularfire.js
+!node_modules/todomvc-app-css/index.css
+!node_modules/todomvc-common/base.css
+!node_modules/todomvc-common/base.js
