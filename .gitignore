@@ -44,3 +44,9 @@ testem.log
 # System Files
 .DS_Store
 Thumbs.db
+
+# ignore all the json files
+*.json
+
+# ignore
+karma.conf.js
