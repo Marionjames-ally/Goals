@@ -3,7 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { Goal } from '../goal';
 import { GoalService }from '../goal-service/goal.service';
 import { AlertService} from '../alert-service/alert.service';
-import { Quote } from '../quote-class/quote'
+import { Quote } from '../quote-class/quote'; 
 
 @Component({
   selector: 'app-goal',
@@ -11,7 +11,7 @@ import { Quote } from '../quote-class/quote'
   styleUrls: ['./goal.component.css']
 })
 export class GoalComponent implements OnInit {
-  goals =[]
+  goals =[];
     
   alertService:AlertService;
   quote:Quote;
@@ -22,8 +22,8 @@ export class GoalComponent implements OnInit {
     if (isComplete) {
       let toDelete = confirm(`Are you sure you want to delete ${this.goals[index].name}?`)
       if (toDelete){
-        this.goals.splice(index,1)
-        this.alertService.alertMe("The goal has been deleted")
+        this.goals.splice(index,1);
+        this.alertService.alertMe("The goal has been deleted");
       }
     }
   }
@@ -44,10 +44,10 @@ export class GoalComponent implements OnInit {
   }
   this.http.get<ApiResponse>("http://quotes.stormconsultancy.co.uk/random.json").subscribe(data=>{
     // Succesful API request
-    this.quote = new Quote(data.author, data.quote)
+    this.quote = new Quote(data.author, data.quote);
   },err=>{
-      this.quote = new Quote("Winston Churchill","Never never give up!")
-      console.log("An error occurred")
-  })
+      this.quote = new Quote("Winston Churchill","Never never give up!");
+      console.log("An error occurred");
+  });
   }
 }
